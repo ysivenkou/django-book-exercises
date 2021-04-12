@@ -1,0 +1,11 @@
+{% extends "layout/basic.html" %}
+
+{% block title %}Редактор рубрик{% endblock title%}
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ formset.as_p }}
+    <input type="submit" value="Сохранить">
+</form>
+{% endblock content %}
